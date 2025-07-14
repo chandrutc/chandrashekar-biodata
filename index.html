@@ -10,12 +10,14 @@
       font-family: 'Segoe UI', sans-serif;
       background: #f0f2f5;
       color: #333;
+      scroll-behavior: smooth;
     }
     .header {
       background: linear-gradient(to right, #3498db, #8e44ad);
       color: white;
       padding: 30px 20px;
       text-align: center;
+      animation: fadeInDown 1.2s ease-in-out;
     }
     .container {
       max-width: 900px;
@@ -24,6 +26,7 @@
       padding: 30px;
       border-radius: 16px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      animation: fadeInUp 1.5s ease;
     }
     h2 {
       border-bottom: 2px solid #eee;
@@ -38,11 +41,52 @@
       font-weight: bold;
       color: #34495e;
     }
+    .photo {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .photo img {
+      width: 180px;
+      height: 180px;
+      border-radius: 100px;
+      object-fit: cover;
+      border: 4px solid #8e44ad;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      animation: fadeIn 2s ease;
+    }
+    .download {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .download a {
+      background: #8e44ad;
+      color: white;
+      padding: 10px 25px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+    .download a:hover {
+      background: #732d91;
+    }
     footer {
       text-align: center;
       padding: 20px;
       color: #aaa;
       font-size: 14px;
+    }
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
     }
   </style>
 </head>
@@ -51,7 +95,12 @@
     <h1>Chandrashekar T C</h1>
     <p>Marriage Biodata | ವೈವಾಹಿಕ ವಿವರ</p>
   </div>
+
   <div class="container">
+    <div class="photo">
+      <img src="assets/profile_photo.jpg" alt="Profile Photo">
+    </div>
+
     <div class="section">
       <h2>Personal Details / ವೈಯಕ್ತಿಕ ವಿವರಗಳು</h2>
       <p><span class="label">Date of Birth:</span> 27/01/1996</p>
@@ -59,7 +108,7 @@
       <p><span class="label">Rashi (Moon Sign):</span> Mesha (Aries) / ಮೇಶ</p>
       <p><span class="label">Age:</span> 29 Years (as of 2025)</p>
       <p><span class="label">Height:</span> 5’7” (170 cm approx.)</p>
-      <p><span class="label">Religion & Caste:</span> [Not Provided]</p>
+      <p><span class="label">Religion & Caste:</span> Hindu</p>
     </div>
 
     <div class="section">
@@ -74,8 +123,7 @@
       <p><span class="label">Father:</span> Chikkahombalegowda, Retired Teacher</p>
       <p><span class="label">Mother:</span> Lakshmi, Homemaker</p>
       <p><span class="label">Siblings:</span> One Younger Brother</p>
-      <p><span class="label">Native Place:</span> Mysore</p>
-      <p><span class="label">Current Residence:</span> Tadagavadi Village, Srirangapatna Taluk, Mandya District</p>
+            <p><span class="label">Current Residence:</span> Tadagavadi Village, Srirangapatna Taluk, Mandya District</p>
     </div>
 
     <div class="section">
@@ -87,6 +135,10 @@
     <div class="section">
       <h2>Contact / ಸಂಪರ್ಕ</h2>
       <p><span class="label">Mobile:</span> 8892938116 / 9980273064</p>
+    </div>
+
+    <div class="download">
+      <a href="assets/Chandrashekar_TC_Biodata.pdf" download>📄 Download PDF</a>
     </div>
   </div>
 
